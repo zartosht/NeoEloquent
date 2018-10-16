@@ -3,7 +3,7 @@
 use Closure;
 use Illuminate\Database\ConnectionInterface;
 
-class Builder extends \Illuminate\Database\Schema\Builder
+class Builder
 {
     /**
      * @param  \Illuminate\Database\ConnectionInterface  $conn
