@@ -128,7 +128,7 @@ you can do so by passing additional arguments to default migration command like:
      * @param  Blueprint  $blueprint
      * @return void
      */
-    protected function build(Illuminate\Database\Schema\Blueprint $blueprint)
+    protected function build(\Illuminate\Database\Schema\Blueprint $blueprint)
     {
         return $blueprint->build(
             $this->getConnection(),
