@@ -3,29 +3,15 @@
 use Closure;
 use Illuminate\Database\ConnectionInterface;
 
-class Builder {
-
-    /**
-     * The database connection resolver.
-     *
-     * @var \Illuminate\Database\ConnectionInterface
-     */
-    protected $conn;
-
-    /**
-     * The Blueprint resolver callback.
-     *
-     * @var Closure
-     */
-    protected $resolver;
+class Builder extend \Illuminate\Database\Schema\Builder{
 
     /**
      * @param  \Illuminate\Database\ConnectionInterface  $conn
      * @return void
      */
-    public function __construct(ConnectionInterface $conn)
+    public function __construct(ConnectionInterface $connection)
     {
-        $this->conn = $conn;
+        $this->connection = $connection;
     }
 
     /**
